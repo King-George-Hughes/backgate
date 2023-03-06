@@ -30,6 +30,28 @@ Auth::routes(['verify'=>true]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
 
+// Admin
+Route::middleware('auth','isAdmin')->group(function(){
+    // Admin Routes
+    // View Dashboard
+    Route::get('/dashboard',[AdminController::class, 'index']);
+    // View Manage Posts
+    Route::get('/manage-post',[AdminController::class, 'manage_post']);
+    // View Manage Bank
+    Route::get('/manage-bank',[AdminController::class, 'manage_bank']);
+    // View Manage Bank Types
+    Route::get('/manage-bank_type',[AdminController::class, 'manage_bank_type']);
+    // View Manage Dumps and Pins
+    Route::get('/manage-d&p',[AdminController::class, 'manage_dandp']);
+    // View Manage Cashapp
+    Route::get('/manage-cashapp',[AdminController::class, 'manage_cashapp']);
+    // View Manage Paypal
+    Route::get('/manage-paypal',[AdminController::class, 'manage_paypal']);
+    // View Manage Users
+    Route::get('/manage-users',[AdminController::class, 'manage_users']);
+
+});
+
 // My Routes
 // Terms and Conditions
 Route::get('/t&c',[HomeController::class, 'tandc']);
@@ -46,26 +68,9 @@ Route::get('/cashapp',[HomeController::class, 'cashapp']);
 // View Cashapp
 Route::get('/dumps&pins',[HomeController::class, 'dumpsandpins']);
 
+
+
 // Admin Routes
-// View Dashboard
-Route::get('/dashboard',[AdminController::class, 'index']);
-// View Manage Posts
-Route::get('/manage-post',[AdminController::class, 'manage_post']);
-// View Manage Bank
-Route::get('/manage-bank',[AdminController::class, 'manage_bank']);
-// View Manage Bank Types
-Route::get('/manage-bank_type',[AdminController::class, 'manage_bank_type']);
-// View Manage Dumps and Pins
-Route::get('/manage-d&p',[AdminController::class, 'manage_dandp']);
-// View Manage Cashapp
-Route::get('/manage-cashapp',[AdminController::class, 'manage_cashapp']);
-// View Manage Paypal
-Route::get('/manage-paypal',[AdminController::class, 'manage_paypal']);
-// View Manage Users
-Route::get('/manage-users',[AdminController::class, 'manage_users']);
-
-
-
 // Add Post
 Route::post('/manage-post',[PostController::class, 'store']);
 

@@ -30,7 +30,7 @@
                   <a href="/home" class="text-decoration-none d-block my-3 {{ request()->is('home') ? '' : 'text-muted' }}"
                     ><i class="fas fa-home"></i> HOME</a
                   >
-                  <a href="#" class="text-decoration-none text-muted d-block my-3"
+                  <a href="mailto:Danielababio279@gmail.com" class="text-decoration-none text-muted d-block my-3"
                     ><i class="fas fa-globe"></i> SUPPORT</a
                   >
                   <a
@@ -70,6 +70,7 @@
                       </a>
                       <div class="collapse bg-dark myBorder" id="us-bank">
                         <ul class="btn-toggle-nav fw-normal small py-2">
+                          {{-- {{ $nav_usbank }} --}}
                           <li>
                             <a
                               href="#"
