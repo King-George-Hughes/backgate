@@ -30,8 +30,8 @@
                     <tbody>
                       @forelse ($cashapps as $cashapp)
                         <tr>
-                          <td>Cashapp</td>
-                          <td>
+                          <td class="text-secondary">Cashapp</td>
+                          <td class="text-secondary">
                             {{ $cashapp->description }}
                           </td>
                           <td class="text-success">${{ $cashapp->price }}</td>

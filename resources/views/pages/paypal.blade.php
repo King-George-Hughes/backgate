@@ -30,8 +30,8 @@
                     <tbody>
                       @forelse ($paypals as $paypal)
                         <tr>
-                          <td>Paypal</td>
-                          <td>
+                          <td class="text-secondary">Paypal</td>
+                          <td class="text-secondary">
                             {{ $paypal->description }}
                           </td>
                           <td class="text-success">${{ $paypal->price }}</td>

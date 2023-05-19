@@ -5,10 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}" />
+        {{-- <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}" />
         <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
-        <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/main.css') }}" /> --}}
         <title>BackGate</title>
+        @vite('resources/js/admin-5.js')
     </head>
     <style>
         .scroll-to-top {
@@ -219,7 +220,7 @@
             </a>
           </section>
 
-        <script src="{{ asset('assets/js/all.min.js') }}"></script>
-        <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+        {{-- <script src="{{ asset('assets/js/all.min.js') }}"></script>
+        <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script> --}}
     </body>
 </html>

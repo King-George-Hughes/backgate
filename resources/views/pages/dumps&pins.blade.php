@@ -30,8 +30,8 @@
                     <tbody>
                       @forelse ($dandps as $dandp)
                         <tr>
-                          <td>Dumps + Pins</td>
-                          <td>{{ $dandp->description }}</td>
+                          <td class="text-secondary">Dumps + Pins</td>
+                          <td class="text-secondary">{{ $dandp->description }}</td>
                           <td class="text-success">${{ $dandp->price }}</td>
                           <td class="text-warning">${{ $dandp->balance }}</td>
                           <td>

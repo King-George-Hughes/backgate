@@ -11,18 +11,7 @@
     <meta name="author" content="" />
 
     <title>BackGate</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}" />
-    {{-- <link
-      href=".{{ asset('assets2/vendor/fontawesome-free/css/all.min.css') }}"
-      rel="stylesheet"
-      type="text/css"
-    /> --}}
-    <link href="{{ asset('assets2/css/sb-admin-2.min.css') }}" rel="stylesheet" />
-    <link
-      href="{{ asset('assets2/vendor/datatables/dataTables.bootstrap4.min.css') }}"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
+    @vite('resources/js/admin-4.js')
   </head>
 
   <body class="myBody w-100" id="page-top">
@@ -99,24 +88,5 @@
     <a class="scroll-to-top rounded" href="#page-top">
       <i class="fas fa-angle-up"></i>
     </a>
-
-    <!-- Bootstrap core JavaScript-->
-    <script src="{{ asset('assets/js/all.min.js') }}"></script>
-    <script src="{{ asset('assets2/vendor/jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('assets2/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <!-- <script src="../assets2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
-
-    <!-- Core plugin JavaScript-->
-    <script src="{{ asset('assets2/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="{{ asset('assets2/js/sb-admin-2.min.js') }}"></script>
-
-    <!-- Page level plugins -->
-    <script src="{{ asset('assets2/vendor/datatables/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('assets2/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="{{ asset('assets2/js/demo/datatables-demo.js') }}"></script>
   </body>
 </html>
